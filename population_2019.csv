@@ -1,0 +1,19 @@
+iso,population,rural_pop_pct,urban_pop_pct,rural_pop,urban_pop,pop source,zone_source,country,year_survey,Source detail
+ARG,44494502,0.0813,0.9187,3617403.013,40877098.99,INDEC,INDEC,Argentina,2018,https://www.indec.gob.ar/indec/web/Nivel4-Tema-2-24-84
+BRA,208494900,0.139413838,0.860586162,29067074.21,179427825.8,IBGE,PNADC,Brazil,2019,https://www.ibge.gov.br/en/statistics/social/population/18176-population-projection.html?=&t=resultados
+BOL,11347241,0.304623089,0.695376911,3456631.605,7890609.395,INE,ECH,Bolivia,2018,https://www.ine.gob.bo/index.php/censos-y-proyecciones-de-poblacion-sociales/
+CHL,18419192,0.126752149,0.873247851,2334672.169,16084519.83,INE,CASEN,Chile,2017,https://www.ine.cl/estadisticas/sociales/demografia-y-vitales/proyecciones-de-poblacion
+COL,48258494,0.226112928,0.773887072,10911869.38,37346624.62,Censo 2018,GEIH,Colombia,2018,"https://www.funcionpublica.gov.co/web/carta-administrativa/-/dane-revela-informe-completo-del-censo-de-poblacion#:~:text=El%20Departamento%20Administrativo%20Nacional%20de,de%2048.258.494%20colombianos%20censados."
+CRI,4993754,0.274345466,0.725654534,1370013.768,3623740.232,INEC,ENAHO,Costa Rica,2018,https://inec.cr/estadisticas?keys=poblacion&fuente_tid=All&field_periodo_tid=All&field_anio_documento_value%5Bvalue%5D%5Bdate%5D=2018
+DOM,10266149,0.187628353,0.812371647,1926220.629,8339928.371,ONE,ENCFT,Dominican Republic,2018,https://www.one.gob.do/datos-y-estadisticas/temas/estadisticas-demograficas/estimaciones-y-proyecciones-demograficas/
+ECU,16776977,0.317517291,0.682482709,5326980.288,11449996.71,Ecuador en cifras (gov),ENEMDU,Ecuador,2017,https://www.ecuadorencifras.gob.ec/proyecciones-poblacionales/
+SLV,6305496,0.383378944,0.616621056,2417394.398,3888101.602,DIGESTYC,EHPM,El Salvador,2018,http://www.digestyc.gob.sv/index.php/temas/des/poblacion-y-estadisticas-demograficas/proyecciones-de-poblacion/nacionales.html
+GTM,16346950,0.555636208,0.444363792,9082957.31,7263992.69,INE,ENEI,Guatemala,2018,https://www.ine.gob.gt/ine/proyecciones/
+HND,9012229,0.454107889,0.545892111,4092524.286,4919704.714,INE,EPHPM,Honduras,2018,https://www.ine.gob.hn/publicaciones/Censos/Censo_2013/09Tomo-IX-Proyecciones-de-Poblacion/Cuadros%20xls/1.pdf
+JAM,2725288,0.479058572,0.520941428,1305572.578,1419715.422,STATIN,SLC,Jamaica,2015,https://statinja.gov.jm/Demo_SocialStats/Newpopulation.aspx
+MEX,124737789,0.244930782,0.755069218,30552124.2,94185664.8,INEGI,ENIGH,Mexico,2018,https://www.inegi.org.mx/app/indicadores/?ind=6300000266&tm=6
+NIC,6142734,0.419159202,0.580840798,2574783.482,3567950.518,World Bank,ENHMNV,Nicaragua,2014,"https://www.inide.gob.ni/ produces an error, sent an email. Current data is from world bank"
+PAN,4158783,0.315677574,0.684322426,1312834.528,2845948.472,INEC,EHPM,Panama,2018,https://www.inec.gob.pa/publicaciones/Default3.aspx?ID_PUBLICACION=499&ID_CATEGORIA=3&ID_SUBCATEGORIA=10
+PRY,6953646,0.384181209,0.615818791,2671460.127,4282185.873,INE,EPHC,Paraguay,2017,https://www.ine.gov.py/default.php?publicacion=2
+PER,32162184,0.220083824,0.779916176,7078376.443,25083807.56,INEI,ENAHO,Peru,2018,https://www.inei.gob.pe/media/principales_indicadores/libro_1.pdf
+URY,3505985,0.163811045,0.836188955,574319.049,2931665.844,,ECH,Uruguay,2018,https://www.ine.gub.uy/estimaciones-y-proyecciones
