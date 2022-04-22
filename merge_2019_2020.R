@@ -168,7 +168,7 @@ olas_update_full_data <- rbind(olas_2019_wide, olas_2020_wide)
 
 
 
-olas_2020_wide_hh  <- dplyr::rename(olas_update_full_data,
+olas_update_full_data  <- dplyr::rename(olas_update_full_data,
                                     c( iso	= pais_c,
                                        scope = zone,
                                        quintile = quintileipc,
@@ -177,7 +177,7 @@ olas_2020_wide_hh  <- dplyr::rename(olas_update_full_data,
                                        population_perc = population_prc))
 
 
-write.csv(olas_update_full_data, file ="output_data/OLAS_harmonized_hh_surveys_wide.csv", row.names = FALSE)
+write.csv(olas_update_full_data, file ="output_data/olas_harmonized_hh_surveys_wide.csv", row.names = FALSE)
 
 
 olas_update_long <-olas_update_full_data %>%                                           ## Write final long file
