@@ -5,6 +5,7 @@ rm(list=ls())
 
 library(dplyr)
 library(tidyr)
+library(plyr)
 print("merging 2019 and 2020 data")
 load("olas_2020_wide.rda")    
 load("olas_2019_wide.rda")

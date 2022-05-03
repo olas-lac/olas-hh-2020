@@ -245,7 +245,7 @@ print("Created quintiles, zone and head of household sex dimensions 2019")
                                                                                                                                             ifelse(data$pais_c == "PER"& data$p110a1 == 1 & data$t110 %in% c(1,2),1, 
                                                                                                                                                    ifelse(data$pais_c == "PRY"& data$v08 %in% c(1,2,3,4) & data$v07a %in% c(1,2),1, 
                                                                                                                                                           ifelse(data$pais_c == "SLV"& data$r312 %in% c(1:4,4.1),1, 
-                                                                                                                                                                 ifelse(data$pais_c == "URY" & data$d11 == 1& data$d12 %in% c(1), 1,0))))))))))))))))))))
+                                                                                                                                                                 ifelse(data$pais_c == "URY" & data$d11 == 1& data$d12 %in% c(1,2), 1,0))))))))))))))))))))
       
       # comsume_other_max
           # Upper bound includes wells when no distinction is made
