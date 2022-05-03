@@ -39,23 +39,24 @@ The following are the primary scripts, in the order in which they should be run:
 #### create_2019_master.R
 
 **create_2019_master.R** combines harmonized country household survey data sets and their variables of interest into one master data set for the first round of data produced for the data set. 
-It references the input_data_2019 folder and a **ref_2019.csv** file which contains the variables for each data set that are of interest. This file uses **master_2019.rda** and **population_2019.csv** as inputs.
+It references the input_data_2019 folder and a **ref_2019.csv** file which contains the variables for each data set that are of interest and the full list of harmonized household surveys files. 
+. 
 
 #### create_2020_master.R
 
 **create_2020_master.R** combines harmonized country household survey data sets and their variables of interest into one master data set for the second round of data (2020) produced for the data set. 
-It references the input_data_2020 folder and a **ref_2020.csv** file which contains the variables for each data set that are of interest.  This file uses **master_2020.rda** and **population_2020.csv** as inputs.
+It references the input_data_2020 folder and a **ref_2020.csv** file which contains the variables for each data set that are of interest and the full list of harmonized household surveys files. 
 
 ### Summarizing the data
-#### create_master_2019.R
-**create_master_2019.R** creates income quintiles and population data and generates indicators of interest broken down by gender of the head of household, income quintiles, and zone (rural/urban). 
+#### create_2019_summary.R
+**create_2019_summary.R** creates income quintiles and population data and generates indicators of interest broken down by gender of the head of household, income quintiles, and zone (rural/urban). 
 This is an update of a previously generated data set that follows more precisely the JMP definitions for improved water sources. 
 
-#### create_master_2020.R
-**create_master_2020.R** creates income quintiles and population data and generates indicators of interest broken down by various dimensions. 
+#### create_2020_summary.R
+**create_2020_summary.R** creates income quintiles and population data and generates indicators of interest broken down by various dimensions. 
 
 ### Combining the data
-**merge_2019_2020** merges the two data sets together to create a master data set (**olas_harmonized_hh_surveys_wide.csv** and **olas_harmonized_hh_surveys_long.csv**) and a series of data sets with the characteristics necessary to upload information to the existing OLAS site (**OLAS_harmonized_hh_surveys.csv** & the files in the **country_files** folder). 
+**merge_2019_2020** merges the two summary data sets together to create a master data set (**olas_harmonized_hh_surveys_wide.csv** and **olas_harmonized_hh_surveys_long.csv**) and a series of data sets with the characteristics necessary to upload information to the existing OLAS site (**OLAS_harmonized_hh_surveys.csv** & the files in the **country_files** folder). 
 
 ## Outputs
 The output data is saved in the output_data folder. 
