@@ -477,7 +477,7 @@ print("Created quintiles, zone and head of household sex dimensions 2019")
                                                         ifelse(data$pais_c=="COL" & data$p5020%in%c(6),1,
                                                                ifelse(data$pais_c=="CRI" & data$v14a%in%c(0),1,
                                                                       ifelse(data$pais_c=="DOM" & data$tipo_sanitario%in%c(5),1,
-                                                                             ifelse(data$pais_c=="ECU" & data$vi13d%in%c(1),1, 
+                                                                             ifelse(data$pais_c=="ECU" & data$vi13%in%c(5),1, 
                                                                                     ifelse(data$pais_c=="GTM" & data$p02b07%in%c(5),1,
                                                                                            ifelse(data$pais_c=="HND" & data$dh204%in%c(2),1, 
                                                                                                   ifelse(data$pais_c=="JAM" &data$i4%in%c(3),1,
