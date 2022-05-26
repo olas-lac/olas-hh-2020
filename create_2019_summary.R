@@ -220,7 +220,7 @@ print("Created quintiles, zone and head of household sex dimensions 2019")
                                                                                                                                           ifelse(data$pais_c == "PER" & data$t110 %in% c(1,2),1, 
                                                                                                                                                  ifelse(data$pais_c == "PRY"& data$v06 %in% c(1,2,3,4) & data$v07a %in% c(1,2),1,
                                                                                                                                                         ifelse(data$pais_c == "SLV"& data$r312 %in% c(1:4,4.1),1,
-                                                                                                                                                               ifelse(data$pais_c == "URY" & data$d11 == 1 & data$d12 %in% c(1), 1,0))))))))))))))))))))
+                                                                                                                                                               ifelse(data$pais_c == "URY" & data$d11 == 1 & data$d12 %in% c(1,2), 1,0))))))))))))))))))))
       
       
       ## Primary drinking water source is piped
@@ -438,7 +438,7 @@ print("Created quintiles, zone and head of household sex dimensions 2019")
                                                              ifelse(data$pais_c=="COL" &data$p5020%in%c(3,4),1,
                                                                     ifelse(data$pais_c=="CRI" & data$v13a%in%c(4),1, 
                                                                            ifelse(data$pais_c=="DOM" & data$tipo_sanitario%in%c(3,4),1, 
-                                                                                  ifelse(data$pais_c=="ECU" & data$vi13%in%c(4) & data$vi13a%in%c(2,3) |(data$vi13%in%c(3)& data$vi13b%in%c(1)),1, ##check!!!
+                                                                                  ifelse(data$pais_c=="ECU" & data$vi13%in%c(3) & data$vi13a%in%c(2,3) |(data$vi13%in%c(4)& data$vi13b%in%c(1)),1, 
                                                                                          ifelse(data$pais_c=="GTM" & data$p02b07%in%c(4),1, 
                                                                                                 ifelse(data$pais_c=="HND" &data$dh205%in%c(5,6,7,8,9),1,  
                                                                                                        ifelse(data$pais_c=="JAM" & data$i5%in%c(3),1, 
@@ -459,7 +459,7 @@ print("Created quintiles, zone and head of household sex dimensions 2019")
                                         ifelse(data$pais_c=="CHL" & data$v23%in%c(3,4,6,7),1, 
                                                ifelse(data$pais_c=="HND" & data$dh205%in%c(5,6),1, 
                                                       ifelse(data$pais_c=="NIC" & data$s1p18%in%c(2),1, 
-                                                             ifelse(data$pais_c=="ECU" & data$vi13%in%c(4) & data$vi13a%in%c(2,3) |(data$vi13%in%c(3)& data$vi13b%in%c(1)),1, #ECU
+                                                             ifelse(data$pais_c=="ECU" & data$vi13%in%c(3) & data$vi13a%in%c(2,3) |(data$vi13%in%c(4)& data$vi13b%in%c(1)),1, #ECU
                                                                     ifelse(data$pais_c=="MEX",NA,
                                                                            ifelse(data$pais_c=="PER" & is.na(data$t111a),NA,
                                                                                   ifelse(data$pais_c=="PER" & data$t111a%in%c(3),1,

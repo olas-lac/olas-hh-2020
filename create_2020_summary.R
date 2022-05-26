@@ -2,8 +2,11 @@
 print("create_summary_data.R starting") 
 rm(list = ls())
 library(hutils)
+library(tidyr)
+library(plyr)
 library(dplyr)
 library(haven)
+
 
 load("master_2020.rda")
 data <- data_2020
@@ -441,7 +444,7 @@ data$zone <- ifelse(data$zona_c == 1, "urban", ifelse(data$zona_c == 0, "rural",
                                                                       ifelse(data$pais_c == "COL" & data$p5020== 2,1,
                                                                              ifelse(data$pais_c == "CRI" & data$v13a %in% c(2,3),1, 
                                                                                     ifelse(data$pais_c == "DOM" & data$se_encuentra_conectada_a %in% c(1),1, 
-                                                                                           ifelse(data$pais_c == "ECU" & data$vi09 == 2, 1,
+                                                                                           ifelse(data$pais_c == "ECU" & data$vi09 == 2, 1, 
                                                                                                   ifelse(data$pais_c == "GTM" & data$p02b07 == 2, 1, 
                                                                                                          ifelse(data$pais_c == "HTI" & data$hv205 %in% c(12),1, 
                                                                                                                 ifelse(data$pais_c == "JAM" & is.na(data$i5), NA,
@@ -485,7 +488,7 @@ data$zone <- ifelse(data$zona_c == 1, "urban", ifelse(data$zona_c == 0, "rural",
                                                                                                                                                  ifelse(data$pais_c == "PRY" & is.na(data$v13),0,
                                                                                                                                                         ifelse(data$pais_c == "PRY" & data$v13 %in% c(3,5,6), 1,
                                                                                                                                                                ifelse(data$pais_c == "SLV"& data$r316 %in% c(7:10),1, 
-                                                                                                                                                                      ifelse(data$pais_c == "SUR" & data$q13_14 %in% c(2),1,
+                                                                                                                                                                      ifelse(data$pais_c == "SUR" ,0,
                                                                                                                                                                              ifelse(data$pais_c == "TTO",0,  
                                                                                                                                                                                     ifelse(data$pais_c == "VEN",0,0))))))))))))))))))))))
       
@@ -501,7 +504,7 @@ data$zone <- ifelse(data$zona_c == 1, "urban", ifelse(data$zona_c == 0, "rural",
                                                              ifelse(data$pais_c == "COL" & data$p5020 %in% c(3,4),1,
                                                                     ifelse(data$pais_c == "CRI" & data$v13a %in% c(4),1, 
                                                                            ifelse(data$pais_c == "DOM" & data$tipo_sanitario %in% c(3,4),1,
-                                                                                  ifelse(data$pais_c == "ECU" & (data$vi09 %in% c(3,4) | data$vi09b %in% c(1:3)), 1, 
+                                                                                  ifelse(data$pais_c == "ECU" & data$vi09 %in% c(3,4) , 1, #took out no access option | data$vi09b %in% c(1:4))
                                                                                          ifelse(data$pais_c == "GTM" & data$p02b07 %in% c(3,4), 1, 
                                                                                                 ifelse(data$pais_c == "HTI" & data$hv205 %in% c(13,15,20,21,22,41),1,
                                                                                                        ifelse(data$pais_c == "JAM" & is.na(data$i5),NA,
@@ -876,8 +879,7 @@ print("Indicators based on household percentage generated")
         
         summary_area$quintileipc <- ifelse(is.na(summary_area$quintile), "total", summary_area$quintileipc)
         summary_area2<- pivot_longer(summary_area, c(urban, rural), names_to = "zone", values_to = "area_prc")
-    
-    
+
     
     ## generate percentages for head of household data (% of pop in each income quintile and zone classification with female vs male head of household)
         
@@ -968,7 +970,7 @@ print("Population data generated")
   summary_final[is.nan.data.frame(summary_final)] <-NA                        ## eliminate NaN
 
 ## Write final files ####   
-  library(tidyr)
+  
   olas_2020_wide <- summary_final
   
   save(olas_2020_wide,file = "olas_2020_wide.rda")                         
