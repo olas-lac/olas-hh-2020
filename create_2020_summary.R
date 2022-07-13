@@ -338,7 +338,7 @@ data$zone <- ifelse(data$zona_c == 1, "urban", ifelse(data$zona_c == 0, "rural",
                                                                                                                               ifelse(data$pais_c == "PRY"& is.na(data$v07),0,
                                                                                                                                      ifelse(data$pais_c == "PRY"& data$v07 %in% c(1),1, 
                                                                                                                                             ifelse(data$pais_c == "SLV"& is.na(data$r312d),0,
-                                                                                                                                                   ifelse(data$pais_c == "SLV"& data$r312d%in%c(0),1,
+                                                                                                                                                   ifelse(data$pais_c == "SLV"& data$r312d%in%c(7),1,
                                                                                                                                                           ifelse(data$pais_c == "VEN" & is.na(data$s4q6), 0,
                                                                                                                                                                  ifelse(data$pais_c == "VEN" & data$s4q6==1,1,0))))))))))))))))))))
 
@@ -973,4 +973,8 @@ print("Population data generated")
   
   olas_2020_wide <- summary_final
   
-  save(olas_2020_wide,file = "olas_2020_wide.rda")                         
+  save(olas_2020_wide,file = "olas_2020_wide.rda")           
+  
+countries  <- olas_2020_wide[olas_2020_wide$quintileipc=="total" & olas_2020_wide$zone == "country" & olas_2020_wide$sex == "all",]
+  
+  

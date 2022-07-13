@@ -189,3 +189,18 @@ olas_update_long <-olas_update_full_data %>%                                    
 write.csv(olas_update_long, "output_data/olas_harmonized_hh_surveys_long.csv")
 
 print("script finished")
+
+## EXTRA
+
+most_recent_year <- aggregate(olas_update_full_data$year, by = list(olas_update_full_data$iso), max)
+colnames(most_recent_year) <- c("iso", "year_survey")
+
+olas_update_ry<-merge(most_recent_year, olas_update_full_data,  by = c("iso", "year_survey"))   ## OLAS_update_upload is for upload to the site. 
+
+countries_ry  <- olas_update_ry[olas_update_ry$quintile=="total" & olas_update_ry$scope == "country" & olas_update_ry$gender == "all",]
+
+
+mean(countries_ry$improved_san_max__pop, rm.na = TRUE)
+mean(countries_ry$improved_san_min__pop, na.rm = TRUE)
+
+
