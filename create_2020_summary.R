@@ -145,7 +145,7 @@ data$zone <- ifelse(data$zona_c == 1, "urban", ifelse(data$zona_c == 0, "rural",
                                                                                                                                                              ifelse(data$pais_c == "SLV"& data$r312 %in% c(3,4),1,
                                                                                                                                                                     ifelse(data$pais_c == "SUR"& data$q13_15 %in% c(2) & data$q13_16 %in% c(1,2,3),1, 
                                                                                                                                                                            ifelse(data$pais_c == "TTO"& data$water %in% c(2),1,
-                                                                                                                                                                                  ifelse(data$pais_c == "VEN"&(data$s4q5__3 ==1| data$s5q13__3 == 1), 1,0)))))))))))))))))))))
+                                                                                                                                                                                  ifelse(data$pais_c == "VEN"&(data$s4q5__1 %in% c(1)| data$s5q13__1 %in% c(1)), 1,0)))))))))))))))))))))
       
       
       
@@ -172,7 +172,7 @@ data$zone <- ifelse(data$zona_c == 1, "urban", ifelse(data$zona_c == 0, "rural",
                                                                                                                                                    ifelse(data$pais_c == "SLV"& data$r313 %in% c(3),1, 
                                                                                                                                                           ifelse(data$pais_c == "SUR"& data$q13_15 %in% c(7),1,
                                                                                                                                                                  ifelse(data$pais_c == "TTO"& data$water %in% c(6),1,
-                                                                                                                                                                        ifelse(data$pais_c == "VEN", NA,0))))))))))))))))))))) 
+                                                                                                                                                                        ifelse(data$pais_c == "VEN"&(data$s4q5__3 ==1| data$s5q13__3 == 1), 1,0))))))))))))))))))))) 
       
       
       
@@ -223,7 +223,7 @@ data$zone <- ifelse(data$zona_c == 1, "urban", ifelse(data$zona_c == 0, "rural",
                                                                                                                                                  ifelse(data$pais_c == "SLV"& data$r312 %in% c(1:4,4.1),1,
                                                                                                                                                         ifelse(data$pais_c == "SUR"& data$q13_15 %in% c(1,2) & data$q13_16 %in% c(1,2,3),1,
                                                                                                                                                                ifelse(data$pais_c == "TTO"& data$water %in% c(1,2,3),1,
-                                                                                                                                                                      ifelse(data$pais_c == "VEN" & data$s4q5__1==1,1,0))))))))))))))))))))) 
+                                                                                                                                                                      ifelse(data$pais_c == "VEN" & data$s4q5__1 %in% c(1:3),1,0))))))))))))))))))))) 
       
       
       
@@ -338,7 +338,7 @@ data$zone <- ifelse(data$zona_c == 1, "urban", ifelse(data$zona_c == 0, "rural",
                                                                                                                               ifelse(data$pais_c == "PRY"& is.na(data$v07),0,
                                                                                                                                      ifelse(data$pais_c == "PRY"& data$v07 %in% c(1),1, 
                                                                                                                                             ifelse(data$pais_c == "SLV"& is.na(data$r312d),0,
-                                                                                                                                                   ifelse(data$pais_c == "SLV"& data$r312d%in%c(7),1,
+                                                                                                                                                   ifelse(data$pais_c == "SLV"& data$r312d%in%c(0),1,
                                                                                                                                                           ifelse(data$pais_c == "VEN" & is.na(data$s4q6), 0,
                                                                                                                                                                  ifelse(data$pais_c == "VEN" & data$s4q6==1,1,0))))))))))))))))))))
 
@@ -973,8 +973,4 @@ print("Population data generated")
   
   olas_2020_wide <- summary_final
   
-  save(olas_2020_wide,file = "olas_2020_wide.rda")           
-  
-countries  <- olas_2020_wide[olas_2020_wide$quintileipc=="total" & olas_2020_wide$zone == "country" & olas_2020_wide$sex == "all",]
-  
-  
+  save(olas_2020_wide,file = "olas_2020_wide.rda")                         

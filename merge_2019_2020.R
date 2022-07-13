@@ -179,7 +179,8 @@ olas_update_full_data  <- dplyr::rename(olas_update_full_data,
 
 
 write.csv(olas_update_full_data, file ="output_data/olas_harmonized_hh_surveys_wide.csv", row.names = FALSE)
-
+write.csv(olas_update_full_data, file ="C:/Users/jesse/Desktop/Data Projects/fs_graphics/OLAS_harmonized_hh_surveys_wide_full_data.csv", row.names = FALSE)
+write.csv(olas_update_full_data, file ="C:/Users/jesse/Desktop/Data Projects/LatinoSan Graphics/OLAS_harmonized_hh_surveys_wide_full_data.csv", row.names = FALSE)
 
 olas_update_long <-olas_update_full_data %>%                                           ## Write final long file
   tidyr::pivot_longer(12:79, names_to="variable", values_to = "value" )%>% 
